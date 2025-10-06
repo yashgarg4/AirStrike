@@ -38,7 +38,7 @@ function cacheAdMidRoll(adKeyId, source) {
       : console.log("Jiogames: cacheAdMidRoll() no source to cacheAd ", source);
     return;
   }
-  window.onAdPrepared(adKeyId);
+  // window.onAdPrepared(adKeyId);
   if (window.DroidHandler && !isAdReady) {
     window.DroidHandler.cacheAd(adKeyId, source);
   }
@@ -64,7 +64,7 @@ function cacheRewardedVideo(adKeyId, source) {
         );
     return;
   }
-  window.onAdPrepared(adKeyId);
+  // window.onAdPrepared(adKeyId);
   if (window.DroidHandler && !isRVReady) {
     window.DroidHandler.cacheAdRewardedVideo(adKeyId, source);
   }
@@ -93,7 +93,7 @@ function showAdMidRoll(adKeyId, source) {
       : console.log("Jiogames: showAdMidRoll() no source to cacheAd ", source);
     return;
   }
-  window.onAdClosed(adKeyId, false, false);
+  // window.onAdClosed(adKeyId, false, false);
   if (window.DroidHandler && firstAdDelay && isAdReady) {
     window.DroidHandler.showAd(adKeyId, source);
   }
@@ -123,7 +123,7 @@ function showRewardedVideo(adKeyId, source) {
         );
     return;
   }
-  window.onAdClosed(adKeyId, true, true);
+  // window.onAdClosed(adKeyId, true, true);
   if (window.DroidHandler && isRVReady) {
     isRewardUser = false;
     window.DroidHandler.ShowRewardedVideo(adKeyId, source);
@@ -346,3 +346,4 @@ const scriptsInEvents = {
 };
 
 globalThis.C3.JavaScriptInEvents = scriptsInEvents;
+
